@@ -1,26 +1,153 @@
-/*
- * App Global CSS
- * ----------------------------------------------------------------------------
- * Put style rules here that you want to apply globally. These styles are for
- * the entire app and not just one component. Additionally, this file can be
- * used as an entry point to import other CSS/Sass files to be included in the
- * output CSS.
- * For more information on global stylesheets, visit the documentation:
- * https://ionicframework.com/docs/layout/global-stylesheets
- */
 
 /* Core CSS required for Ionic components to work properly */
-@import "@ionic/angular/css/core.css";
+@import "~@ionic/angular/css/core.css";
 
 /* Basic CSS for apps built with Ionic */
-@import "@ionic/angular/css/normalize.css";
-@import "@ionic/angular/css/structure.css";
-@import "@ionic/angular/css/typography.css";
-@import '@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
 
 /* Optional CSS utils that can be commented out */
-@import "@ionic/angular/css/padding.css";
-@import "@ionic/angular/css/float-elements.css";
-@import "@ionic/angular/css/text-alignment.css";
-@import "@ionic/angular/css/text-transformation.css";
-@import "@ionic/angular/css/flex-utils.css";
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+
+@font-face {
+    font-family: 'Roboto-Bold';
+    font-style: normal;
+    font-weight: bold;
+    src: url('./assets/fonts/Roboto-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-BoldItalic';
+    font-style: italic;
+    font-weight: bold;
+    src: url('./assets/fonts/Roboto-BoldItalic.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-Italic';
+    font-style: italic;
+    font-weight: normal;
+    src: url('./assets/fonts/Roboto-Italic.ttf');
+}
+
+* {
+    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main-button {
+    background-color: #08a95f;
+    --box-shadow: none;
+    position: relative;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.main-button::after {
+    content: " ";
+    position: absolute;
+    width: 80%;
+    right: 10%;
+    bottom: 0;
+    top: 10px;
+    height: 40px;
+    z-index: -1;
+    box-shadow: 0px 20px 20px -17px rgba(0, 111, 255, 1);
+}
+.background{
+    background-color: #000;
+}
+.pages {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #000;
+  }
+
+.compra-button {
+    background-color: #c51212;
+    --box-shadow: none;
+    position: relative;
+    height: 50px;
+    width: 80% !important;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+  .login-button {
+    background-color: #08a95f;
+    --box-shadow: none;
+    position: relative;
+    height: 50px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.login-button::after {
+    content: " ";
+    position: absolute;
+    width: 80%;
+    right: 10%;
+    bottom: 0;
+    top: 10px;
+    height: 40px;
+    z-index: -1;
+}
+
+.signup-button {
+    color: #ffffff;
+}
+
+.backbtn {
+    margin-left: 15px;
+    background-color: #08a95f;
+    color: #ffffff;
+    font-size: 30px;
+}
+
+
+// Removing ion-button focus outline
+ion-button:focus {
+    outline: none !important;
+}
+
+ion-buttons:focus {
+    outline: none !important;
+}
+
+// Removing iOS and Android Header line for entire app
+ion-toolbar {
+    --border-width: 0 !important;
+}
+
+.header-md::after {
+    background: none;
+}
+
+
+// Customizing Product Slider Bullets
+
+.product-slider {
+    .swiper-pagination {
+        text-align: left;
+        padding-left: 20px;
+
+        .swiper-pagination-bullet {
+            background: #ffffff;
+            opacity: 1;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: var(--ion-color-primary);
+        }
+    }
+}
+

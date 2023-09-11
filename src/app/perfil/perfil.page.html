@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="primary" class="backbtn" routerLink="/home" routerDirection="back">
+        <img src='../../assets/back-dark.svg' />
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+  <h1 class="titlePerfil">Perfil</h1>
+  <div class="user_login_info">
+    <div class="user_thumb">
+      <div class="user_avatar"><img src="assets/images/avatar.jpg" alt="" title="" /></div> 
+      <!-- <div class="user_details" *ngFor="let user of users"> -->
+       <p>Hola, <span>Cat Pacino</span></p>
+      </div>  
+            
+    </div>
+  <div class="perfil-info">
+    <ion-item class="">
+      <ion-label color="dark" position="floating">Nombre</ion-label>
+      <ion-input value="Cat Pacino"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Direccion</ion-label>
+      <ion-input value="Nueva Centinela 0433"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Ciudad</ion-label>
+      <ion-input value="Valparaiso - El Quisco"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input value="juliohidalgo@gmail.com"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Fono</ion-label>
+      <ion-input value="+56947618468"></ion-input>
+    </ion-item>
+  </div>
+</ion-content>

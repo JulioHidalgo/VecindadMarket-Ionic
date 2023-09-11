@@ -1,3 +1,54 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay" [disabled]="!isMenuEnabled">
+      <ion-content>
+        <div class="main-list">
+          <ion-list id="inbox-list">
+            <ion-menu-toggle auto-hide="false">
+              <ion-item (click)="navigate('/home', 1)" detail="false" class="ion-text-center" [class.selected]="selectedIndex == 1">
+                <ion-label><ion-icon slot="start" name="home-outline"></ion-icon> Home</ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+            <ion-menu-toggle auto-hide="false">
+              <ion-item (click)="navigate('/perfil', 2)" detail="false" class="ion-text-center" [class.selected]="selectedIndex == 2">
+                <ion-label><ion-icon slot="start" name="person-circle-outline"></ion-icon> Perfil</ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+            <ion-menu-toggle auto-hide="false">
+              <ion-item  (click)="navigate('/ventas', 3)" detail="false" class="ion-text-center" [class.selected]="selectedIndex == 3">
+                <ion-label><ion-icon slot="start" name="storefront-outline"></ion-icon> Ventas</ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+            <ion-menu-toggle auto-hide="false">
+              <ion-item (click)="navigate('/anuncios', 4)" detail="false" class="ion-text-center" [class.selected]="selectedIndex == 4">
+                <ion-label><ion-icon slot="start" name="calendar-outline"></ion-icon> Anuncios</ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+            <ion-menu-toggle auto-hide="false">
+              <ion-item (click)="navigate('/categorias', 5)" detail="false" class="ion-text-center" [class.selected]="selectedIndex == 5">
+                <ion-label><ion-icon slot="start" name="images-outline"></ion-icon> Categoria</ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+            <ion-menu-toggle auto-hide="false">
+              <ion-item (click)="navigate('/mispedidos', 6)" detail="false" class="ion-text-center" [class.selected]="selectedIndex == 6">
+                <ion-label><ion-icon slot="start" name="mail-outline"></ion-icon> Mis Pedidos</ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+            <ion-menu-toggle auto-hide="false">
+              <ion-item (click)="navigate('/mensajes', 7)" detail="false" class="ion-text-center" [class.selected]="selectedIndex == 7">
+                <ion-label><ion-icon slot="start" name="mail-outline"></ion-icon> Mensajes</ion-label>
+              </ion-item>
+            </ion-menu-toggle>
+          </ion-list>
+
+          <ion-button fill="clear" color="dark" (click)="close()">
+            <ion-icon name="close-circle-outline"></ion-icon>
+          </ion-button>
+        </div>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
 </ion-app>
+
+

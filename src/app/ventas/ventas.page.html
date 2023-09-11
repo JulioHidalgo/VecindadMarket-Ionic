@@ -1,0 +1,44 @@
+<ion-app>
+  <ion-header>
+    <ion-toolbar color="dark">
+      <ion-buttons slot="start">
+        <ion-menu-button><ion-icon name="menu"></ion-icon></ion-menu-button>
+      </ion-buttons>
+      <ion-title>VECINDAD MARKET</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content fullscreen="true">
+  <h1 class="title">Tienda</h1>
+
+  <div class="cart-items" *ngFor="let item of data?.products">
+    <ion-card mode="ios">
+      <ion-card-content>
+        <div class="item-img">
+          <img src="{{ item.thumbnail }}" />
+        </div>
+
+        <div class="item-info">
+          <ion-col class="ion-text-left" routerLink="/item-details" routerDirection="forward">
+            <h6>{{item.title}}</h6>
+            <span>{{ item.description}}</span>
+            <p class="cart-items">$ {{ item.price }}</p>
+          </ion-col> 
+
+          <div class="qty-selector">
+            <ion-button class="btn_ventas" fill="clear">-</ion-button>
+            <ion-label>1</ion-label>
+            <ion-button class="btn_ventas" fill="clear">+</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+
+<ion-footer translucent="true" class="ion-no-border" mode="md">
+  <ion-toolbar color="translucent">
+    <ion-button expand="block" class="text-white login-button" routerLink="/checkout" routerDirection="forward">Continue</ion-button>
+  </ion-toolbar>
+</ion-footer>
+</ion-app>
