@@ -1,0 +1,7 @@
+{
+  "name": "VecindadMarket",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
