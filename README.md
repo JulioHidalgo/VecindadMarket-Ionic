@@ -22,7 +22,7 @@ Clona este repositorio en tu máquina local:
 
 bash
 Copy code
-git clone https://github.com/tu-usuario/ecommerce-ionic-app.git
+git clone https://github.com/JulioHidalgo/VecindadMarket-Ionic
 
 Navega hasta la carpeta del proyecto:
 
