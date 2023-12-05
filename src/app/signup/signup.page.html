@@ -1,4 +1,41 @@
 <ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+    </ion-buttons>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Registro</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="formularioRegistro" (keyup.enter)="guardar()">
+        <ion-item>
+          <ion-label position="floating">Nombre<ion-text color="danger"> (Requerido)</ion-text></ion-label>
+          <ion-input formControlName="nombre" clearInput="true"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Contraseña <ion-text color="danger">(Requerido)</ion-text></ion-label>
+          <ion-input formControlName="password" type="password" clearInput="true"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Confirmar contraseña <ion-text
+              color="danger">(Requerido)</ion-text></ion-label>
+          <ion-input formControlName="confirmacionPassword" type="password" clearInput="true"></ion-input>
+        </ion-item>
+        <br>
+        <ion-button (click)="guardar()">Registrarse
+        </ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+
+<!-- <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-button class="backbtn" routerLink="/home" routerDirection="back">
@@ -15,23 +52,30 @@
     <div class="form-container">
       <ion-item>
         <ion-label position="floating">Nombre</ion-label>
-        <ion-input></ion-input>
+        <ion-input type="text" [(ngModel)]="name" [ngModelOptions]="{ standalone: true}"
+          class="form-control"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="floating">Email</ion-label>
-        <ion-input></ion-input>
+        <ion-input type="email" [(ngModel)]="email" [ngModelOptions]="{ standalone: true}"
+          class="form-control"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="floating">Contraseña</ion-label>
-        <ion-input type="password"></ion-input>
+        <ion-input type="password" [(ngModel)]="password" [ngModelOptions]="{ standalone: true}"
+          class="form-control"></ion-input>
         <ion-icon name="eye" slot="end"></ion-icon>
       </ion-item>
 
-      <ion-button expand="block" class="login-button">Inscribirse</ion-button>
-
-      <div class="sign-up">
-        Already have an account? <ion-button class="signup-button" color="dark" fill="clear" routerLink="/login" routerDirection="forward">Sign in</ion-button>
-      </div>
+      <ion-button expand="block" class="login-button" type="submit" (click)="save()">Registrarse</ion-button>
     </div>
   </div>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-buttons>
+      <ion-button [routerLink]="['/registro']">Registrarse</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer> -->

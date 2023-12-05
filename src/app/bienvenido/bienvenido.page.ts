@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bienvenido.page.scss'],
 })
 export class BienvenidoPage implements OnInit {
+  
 
   constructor() { }
 
