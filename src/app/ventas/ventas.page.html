@@ -1,4 +1,105 @@
+<!-- <ion-app>
+  <ion-header>
+    <ion-toolbar color="dark">
+      <ion-buttons slot="start">
+        <ion-menu-button><ion-icon name="menu" class="ion-menu-button"></ion-icon></ion-menu-button>
+      </ion-buttons>
+      <ion-title>VECINDAD MARKET</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content fullscreen="true">
+  <h1 class="title">Tienda</h1>
+
+  <table *ngIf="listProductos.length > 0" class="table table-striped mt-3">
+    <thead>
+      <tr>
+        <th scope="col">Producto</th>
+        <th scope="col">Categoria</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Stock</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let producto of listProductos" >
+        <td>{{ producto.name }}</td>
+        <td>{{ producto.category }}</td>
+        <td>{{ producto.price }}</td>
+        <td>{{ producto.stock }}</td>
+        <td>
+          <i class="fa fa-edit text-primary m-1"></i>
+          <i (click)="eliminarProducto(producto._id)" class="fa fa-trash text-danger"></i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</ion-content>
+
+<ion-footer translucent="true" class="ion-no-border" mode="md">
+  <ion-toolbar color="translucent">
+    <ion-button expand="block" class="text-white login-button" routerLink="/checkout" routerDirection="forward">Continue</ion-button>
+  </ion-toolbar>
+</ion-footer>
+</ion-app> -->
+
+
+
+
+
+
 <ion-app>
+  <ion-header>
+    <ion-toolbar color="dark">
+      <ion-buttons slot="start">
+        <ion-menu-button><ion-icon name="menu" class="ion-menu-button"></ion-icon></ion-menu-button>
+      </ion-buttons>
+      <ion-title>VECINDAD MARKET</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content fullscreen="true">
+  <h1 class="title">Tienda</h1>
+
+  <div class="cart-items" *ngFor="let producto of listProductos">
+    <ion-card mode="ios">
+      <ion-card-content>
+        <div class="item-img">
+          <img src="{{ producto.thumbnail }}" />
+        </div>
+
+        <div class="item-info">
+          <ion-col class="ion-text-left" routerLink="/item-details" routerDirection="forward">
+            <h6>{{producto.name }}</h6>
+            <span>{{ producto.category }}</span>
+            <p class="cart-items">$ {{ producto.price }}</p>
+            <p> {{ producto.stock }}</p>
+          </ion-col> 
+
+          <div class="qty-selector">
+            <ion-button class="btn_ventas" fill="clear">-</ion-button>
+            <ion-label>1</ion-label>
+            <ion-button class="btn_ventas" fill="clear">+</ion-button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+
+<ion-footer translucent="true" class="ion-no-border" mode="md">
+  <ion-toolbar color="translucent">
+    <ion-button expand="block" class="text-white login-button" routerLink="/checkout" routerDirection="forward">Continue</ion-button>
+  </ion-toolbar>
+</ion-footer>
+</ion-app>
+
+
+
+
+
+/* DATA VERDADERA CARRO COMPRAS*/
+<!-- <ion-app>
   <ion-header>
     <ion-toolbar color="dark">
       <ion-buttons slot="start">
@@ -41,4 +142,4 @@
     <ion-button expand="block" class="text-white login-button" routerLink="/checkout" routerDirection="forward">Continue</ion-button>
   </ion-toolbar>
 </ion-footer>
-</ion-app>
+</ion-app> -->
