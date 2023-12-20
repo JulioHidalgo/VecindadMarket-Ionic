@@ -15,6 +15,7 @@ import { Router } from '@angular/router';
 export class AppComponent implements OnInit {
   public isMenuEnabled:boolean = true;
   public selectedIndex = 0;
+  
 
   constructor(
     private platform: Platform,
@@ -30,6 +31,8 @@ export class AppComponent implements OnInit {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+        if (this.platform.is('cordova')) {
+        }
     });
   }
 

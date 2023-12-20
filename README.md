@@ -28,12 +28,18 @@ Navega hasta la carpeta del proyecto:
 
 cd vecindad-market-ionic
 
-Instala las dependencias:
+Instala las dependencias en Frontend y Backend:
 npm install
 Uso
-Para ejecutar la aplicación en un navegador web de desarrollo, utiliza el siguiente comando:
 
+Para ejecutar el servidor debe estar en la raiz de la carpeta BACKEND en un navegador web de desarrollo, utiliza el siguiente comando:
+Npm run dev
+
+una vez ejecutado el Backend ejecuto el Front
+Para ejecutar la aplicación debe estar en la raiz de la carpeta FRONTEND en un navegador web de desarrollo, utiliza el siguiente comando:
 ionic serve
+
+
 
 Contacto
 Si tienes preguntas o necesitas ayuda, puedes contactarnos en:

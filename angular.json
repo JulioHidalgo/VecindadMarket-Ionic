@@ -103,6 +103,7 @@
             "scripts": [],
             "assets": [
               {
+                
                 "glob": "favicon.ico",
                 "input": "src/",
                 "output": "/"

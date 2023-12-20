@@ -8,7 +8,7 @@ import { AlertController, NavController } from '@ionic/angular';
    styleUrls: ['./signup.page.scss'],
 })
 export class SignupPage implements OnInit {
-
+  eyeStatus: boolean = true;
   formularioRegistro: FormGroup;
   
   constructor(public fb: FormBuilder, public alertController: AlertController, public navCtrl:NavController) {
@@ -52,44 +52,8 @@ export class SignupPage implements OnInit {
           localStorage.setItem('ingresado','true');
           this.navCtrl.navigateRoot('home');
   }
+
+  toggleEye() {
+    this.eyeStatus = !this.eyeStatus;
+  }
 }
-
-// import { HttpClient } from '@angular/common/http';
-// import { Component, OnInit } from '@angular/core';
-
-// @Component({
-//   selector: 'app-signup',
-//   templateUrl: './signup.page.html',
-//   styleUrls: ['./signup.page.scss'],
-// })
-// export class SignupPage implements OnInit {
-// name: string = "";
-// email: string = "";
-// password: string = "";
-
-//   constructor(private http: HttpClient)
-//   {
-//   }
-
-//   ngOnInit(): void {
-//   }
-
-//   signup()
-//   {
-//     let bodyData = 
-//     {
-//       "name" : this.name,
-//       "email"  : this.email,
-//       "password" : this.password,
-//     };
-//     this.http.post("http://localhost:9992/user/create", bodyData).subscribe((resultData: any)=>
-//     {
-//       console.log(resultData);
-//       alert("Usuario registrado correctamente")
-//     });
-//   }
-//   save()
-//   {
-// this.signup();
-//   }
-// }

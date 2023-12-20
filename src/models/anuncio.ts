@@ -4,10 +4,10 @@ export class Anuncio {
     mes: string;
     titulo: string;
     descripcion: string;
-    precio: string;
+    precio: number;
 
 
-    constructor(dia: number, mes: string, titulo: string, descripcion: string, precio: string ){
+    constructor(dia: number, mes: string, titulo: string, descripcion: string, precio: number ){
         this.dia = dia;
         this.mes = mes;
         this.titulo = titulo;

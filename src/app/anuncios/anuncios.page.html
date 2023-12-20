@@ -1,45 +1,3 @@
-<!-- <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-button class="backbtn" routerLink="/home" routerDirection="back">
-        <img src="../../assets/back.svg" />
-      </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content fullscreen="true">
-  <h1 class="title">Anuncios de la Vecindad</h1>
-    <ion-card mode="ios" *ngFor="let anuncio of listAnuncios">
-      <ion-card-content>
-        <div class="blog-posts"  >
-          <ul class="posts">
-            <li>
-              <div class="post_entry">
-                  <div class="post_date">
-                      <span class="day">{{ anuncio.dia }}</span>
-                      <span class="month">{{ anuncio.mes }}</span>
-                  </div>
-                  <div class="post_title">
-                  <h2>{{ anuncio.titulo }}</h2>
-                  <h3>{{ anuncio.descripcion }}</h3>
-                  <div class="valor">
-                    <h4 class="precio">{{ anuncio.precio }}</h4>
-                  </div>
-                  <div class="lineas"></div>
-                  </div>
-              </div>
-            </li>
-          </ul>
-          
-        </div>
-      </ion-card-content>
-    </ion-card>
-</ion-content> -->
-
-
-
-
 <div class="pages">
   <div data-page="blog" class="page no-toolbar no-navbar">
     <div class="page-content">
@@ -52,67 +10,24 @@
      
      <div id="pages_maincontent" >
       <h2 class="page_title">ANUNCIOS DE LA VECINDAD</h2>
-      
-       <!-- <div class="page_content" *ngFor="let item of data?.data">  -->
+      <div class="page_content" >
         <div class="page_content">
-            <div class="blog-posts"  >
+            <div class="blog-posts" *ngFor="let anuncio of listAnuncios" >
 
                     <div class="post_entry">
                         <div class="post_date">
-                          <span class="day">12</span>
-                          <span class="month">Sept</span>
-                            <!-- <span class="day">{{ item.dia }}</span>
-                            <span class="month">{{ item.mes }}</span> -->
+                            <span class="day">{{ anuncio.dia }}</span>
+                            <span class="month">{{ anuncio.mes }}</span>
                         </div>
                         <div class="post_title">
-                          <h2>Clases de Armonicaa</h2>
-                          <h3>técnicas, bendings, improvisación</h3>
-                        <!-- <h2>{{ item.titulo }}</h2>
-                        <h3>{{ item.descripcion }}</h3> -->
+                        <h2>{{ anuncio.titulo }}</h2>
+                        <h3>{{ anuncio.descripcion }}</h3>
                         <div class="valor">
-                          <!-- <h4>{{ item.precio | currency: 'USD' }}</h4> -->
-                          <h4>$10.000</h4>
+                          <h4>{{ anuncio.precio | currency: 'USD' }}</h4>
                         </div>
                         </div>
                     </div>
-
-                <div class="post_entry">
-                    <div class="post_date">
-                      <span class="day">21</span>
-                      <span class="month">Agosto</span>
-                        <!-- <span class="day">{{ item.dia }}</span>
-                        <span class="month">{{ item.mes }}</span> -->
-                    </div>
-                    <div class="post_title">
-                      <h2>Kit de cuidado para Mascotas</h2>
-                      <h3>peines, cepillos, cortauñas, tijeras, etc</h3>
-                    <!-- <h2>{{ item.titulo }}</h2>
-                    <h3>{{ item.descripcion }}</h3> -->
-                    <div class="valor">
-                      <!-- <h4>{{ item.precio | currency: 'USD' }}</h4> -->
-                      <h4>$15.000</h4>
-                    </div>
-                    </div>
-                </div>
-                <div class="post_entry">
-                  <div class="post_date">
-                    <span class="day">2</span>
-                    <span class="month">Abril</span>
-                      <!-- <span class="day">{{ item.dia }}</span>
-                      <span class="month">{{ item.mes }}</span> -->
-                  </div>
-                  <div class="post_title">
-                    <h2>Arriendo de Estacionamiento</h2>
-                    <h3>estacionamiento en el centro de la ciudad, cerca de la plaza de armas</h3>
-                  <!-- <h2>{{ item.titulo }}</h2>
-                  <h3>{{ item.descripcion }}</h3> -->
-                  <div class="valor">
-                    <!-- <h4>{{ item.precio | currency: 'USD' }}</h4> -->
-                    <h4>$50.000</h4>
-                  </div>
-                  </div>
-              </div>
-
+<hr class="hr1">
             </div>
       </div>
       <div class="clear"></div>  

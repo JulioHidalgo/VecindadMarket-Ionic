@@ -9,6 +9,7 @@ import { UtilService } from '../util.service';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
+  eyeStatus: boolean = true;
 
   formularioLogin: FormGroup;
 
@@ -52,32 +53,11 @@ export class LoginPage implements OnInit {
   
       await alert.present();
     }
+    
+  }
+  toggleEye() {
+    this.eyeStatus = !this.eyeStatus;
   }
 
 }
 
-// import { Component, OnInit } from '@angular/core';
-// import { NavController } from '@ionic/angular';
-// import { UtilService } from '../util.service';
-
-// @Component({
-//   selector: 'app-login',
-//   templateUrl: './login.page.html',
-//   styleUrls: ['./login.page.scss'],
-// })
-// export class LoginPage implements OnInit {
-
-//   constructor(
-//     private util: UtilService,
-//     private navCtrl: NavController, 
-//   ) { }
-
-//   ngOnInit() {
-//   }
-
-//   login() {
-//     this.util.setMenuState(true);
-//     this.navCtrl.navigateRoot('/home', { animationDirection: 'forward' });
-//   }
-
-// }
